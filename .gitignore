@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.ipynb_checkpoints/
+data/raw/*.csv
+data/raw/*.parquet
+data/interim/*.parquet
+data/external/*.cache
+logs/*.log
+.DS_Store
+.idea/
+.vscode/
+*.egg-info/

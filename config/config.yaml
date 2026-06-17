@@ -1,0 +1,111 @@
+# NJ Housing Pricing Model — central config
+random_seed: 42
+
+# 21 New Jersey counties (Phase 4 Level 1)
+counties:
+  - Atlantic
+  - Bergen
+  - Burlington
+  - Camden
+  - Cape May
+  - Cumberland
+  - Essex
+  - Gloucester
+  - Hudson
+  - Hunterdon
+  - Mercer
+  - Middlesex
+  - Monmouth
+  - Morris
+  - Ocean
+  - Passaic
+  - Salem
+  - Somerset
+  - Sussex
+  - Union
+  - Warren
+
+# Scraper
+scraper:
+  primary: zillow
+  fallback_order: [realtor, redfin]
+  rate_limit_seconds: 2.5
+  max_retries: 3
+  backoff_factor: 2.0
+  timeout_seconds: 20
+  user_agents:
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Safari/605.1.15"
+    - "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+    - "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1"
+    - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0 Safari/537.36"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0 Safari/537.36 Edg/119.0"
+    - "Mozilla/5.0 (Linux; Android 13) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Mobile Safari/537.36"
+
+# Cleaning
+cleaning:
+  min_price: 10000
+  max_price: 20000000
+  property_type_canonical:
+    - "Single Family"
+    - "Condo/Co-op"
+    - "Townhouse"
+    - "Multi-Family"
+    - "Land"
+
+# Geocoding
+geocoding:
+  provider: nominatim          # or "google"
+  user_agent: "nj-housing-pricing-model/1.0 (contact: internship@example.com)"
+  cache_path: data/external/geocode_cache.json
+  rate_limit_seconds: 1.0
+  google_api_key: null          # set if provider=google
+
+# Segmentation
+segmentation:
+  zip_cluster_min_size: 30      # ZIPs with < 30 listings get clustered
+  corridor_nyc_counties:        # Phase 4 Level 4
+    - Bergen
+    - Hudson
+    - Essex
+    - Union
+    - Passaic
+    - Middlesex
+    - Monmouth
+  corridor_philly_counties:
+    - Camden
+    - Burlington
+    - Gloucester
+    - Salem
+    - Cumberland
+
+# Pricing
+pricing:
+  min_listings_to_publish: 10
+  percentile_low: 10
+  percentile_high: 90
+
+# Modeling
+modeling:
+  test_size: 0.2
+  cv_folds: 5
+  ridge_alphas: [0.1, 1.0, 10.0, 100.0]
+
+# Clustering
+clustering:
+  k_min: 2
+  k_max: 8
+  tier_names: ["Budget", "Mid", "Premium", "Luxury"]
+
+# Paths
+paths:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  external_dir: data/external
+  outputs_dir: outputs
+  models_dir: outputs/models
+  reports_dir: reports
+  figures_dir: reports/figures
+  logs_dir: logs

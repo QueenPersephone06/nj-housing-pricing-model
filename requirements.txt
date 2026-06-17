@@ -1,0 +1,35 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14.0
+pyyaml>=6.0
+
+# Scraping
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=4.9
+fake-useragent>=1.4
+tenacity>=8.2
+
+# Geocoding
+geopy>=2.4
+
+# Modeling
+scikit-learn>=1.3
+joblib>=1.3
+
+# Viz
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.18
+folium>=0.15
+branca>=0.7
+
+# Reporting
+python-pptx>=0.6.23
+openpyxl>=3.1
+jupyter>=1.0
+ipykernel>=6.0
+
+# Testing
+pytest>=7.4

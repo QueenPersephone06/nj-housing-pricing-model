@@ -1,0 +1,144 @@
+feature,coefficient
+municipality_Hardyston,306178.26063843793
+municipality_Lakewood,240237.77214408826
+county_Bergen,230763.66107125147
+municipality_Hackettstown,228293.8270631943
+county_Salem,-201031.40049164256
+county_Cumberland,-200416.96602783585
+county_Hudson,174709.912188241
+county_Camden,-173649.05699052222
+property_type_Multi-Family,150154.96459844382
+property_type_Land,-146940.35299729928
+municipality_Burlington,146659.20934038173
+sqft,145956.53917531317
+county_Gloucester,-135947.20431253925
+county_Morris,126810.50635251452
+county_Atlantic,-125144.74778284386
+county_Monmouth,110118.79917555074
+county_Somerset,105809.4392700421
+municipality_Ridgewood,95561.30874255342
+municipality_Washington,-93854.24065494345
+municipality_Hopatcong,-89697.9745003921
+municipality_Hackensack,87936.28732144015
+county_Cape May,86213.01586867194
+municipality_Hawthorne,84343.35632336629
+municipality_Newton,-80497.80472992676
+municipality_Vernon,-79229.72717272972
+municipality_Sparta,-79017.98289744298
+municipality_Phillipsburg,-76918.87943991329
+municipality_Toms River,-72688.40334888657
+municipality_Mansfield,-71411.81463186072
+county_Essex,65323.43666038313
+municipality_Mendham,64865.12371668045
+municipality_Vineland,-63724.80736702586
+municipality_Salem,-62447.8673869108
+county_Burlington,-62424.27427199166
+municipality_Plainfield,62113.66470049319
+municipality_Chatham,62054.50275973715
+municipality_Penns Grove,-60120.13481636466
+municipality_Mount Laurel,-59478.431779295905
+municipality_Cherry Hill,-59372.2954249083
+municipality_Willingboro,-59199.95552066116
+municipality_Millville,-58557.03511828268
+municipality_Manalapan,57301.24732083593
+municipality_Brick,-56925.42115974587
+county_Hunterdon,53821.26471235039
+county_Mercer,-51566.96263403725
+municipality_Evesham,-50580.431466476715
+municipality_Union City,50372.61850391899
+municipality_Ocean City,48966.1202391093
+municipality_Bayonne,47159.68799223578
+municipality_Pennsville,-46865.57733054571
+municipality_Asbury Park,43671.19205991489
+municipality_Stone Harbor,42095.40087050986
+municipality_Vineland City,-42002.531399375446
+municipality_Moorestown,-39824.66484593872
+municipality_Jackson,-39766.65529116989
+municipality_Hillsborough,39563.26715870951
+municipality_Point Pleasant,-39147.33949651203
+county_Union,37805.18378995702
+municipality_Manchester,-37575.37049352727
+bedrooms,37575.016710777636
+lot_size,37560.03673254036
+municipality_Camden,-37014.08425512977
+municipality_Bridgeton,-36132.5921431524
+municipality_Washington Township,-35965.590995978506
+municipality_Gloucester Township,-34695.414555649855
+municipality_Deptford,-34618.972202596044
+municipality_Atlantic City,-34145.6507143202
+municipality_Hoboken,33796.23270245279
+municipality_Fort Lee,33737.62042414936
+municipality_Pennsauken,-33196.92206123713
+municipality_Hamilton,-31844.392307400325
+municipality_Egg Harbor Township,-31614.950412227405
+municipality_Carneys Point,-31597.820957830314
+municipality_Jersey City,29491.454070466225
+municipality_Livingston,29432.53203776766
+municipality_Piscataway,28476.532907788398
+municipality_Madison,28250.843928394068
+year_built,27564.5529013101
+municipality_Bernards,26038.37118211175
+municipality_Galloway,-24966.255406272507
+municipality_Randolph,-24938.965771881158
+municipality_Bridgewater,24636.021098816058
+property_type_Condo/Co-op,-24445.32015107816
+municipality_Lawrence,-23606.976022768507
+municipality_Franklin,22914.129590398024
+municipality_Paramus,22884.23772226286
+municipality_Parsippany,-22440.92479686414
+county_Sussex,-22265.228662053847
+municipality_Montclair,22189.671607391698
+municipality_Glassboro,-21856.958881831237
+municipality_Monroe,-21773.342976974545
+municipality_West Deptford,-21732.339255163333
+municipality_Freehold,21447.892275498678
+bathrooms,20407.96048802439
+municipality_Fair Lawn,-19701.48000294842
+municipality_Clifton,-19597.754396474786
+municipality_Hammonton,-19431.531073953818
+municipality_Lambertville,19216.32899278708
+municipality_Morristown,19019.926516446456
+municipality_Union,-17934.64426418358
+municipality_Tewksbury,17360.571956906722
+municipality_Flemington,17229.060521707313
+municipality_Passaic,-16823.07701366846
+property_type_Townhouse,16499.804927944722
+municipality_Wayne,-16368.568330992424
+municipality_Paterson,-16223.450996419931
+county_Passaic,15330.505585810197
+municipality_North Bergen,15228.52805016013
+municipality_Pleasantville,-14986.360176072123
+county_Middlesex,-14503.358192003996
+county_Warren,-13891.107663524685
+municipality_Summit,-13641.136744161777
+municipality_Elizabeth,13250.511164699215
+municipality_Edison,-12965.661594302059
+municipality_West Windsor,12870.066290191102
+municipality_East Brunswick,-12188.24106056663
+municipality_Woodbridge,-11998.56857510533
+municipality_Teaneck,10641.033468200669
+municipality_Trenton,-10258.710787553435
+municipality_West Orange,10191.967212478268
+municipality_Voorhees,-9370.340693600909
+municipality_Bloomfield,-7597.652786960004
+municipality_Somerville,-7342.349759992638
+municipality_East Orange,7069.6640676844545
+municipality_Middletown,-6522.230855947737
+municipality_Avalon,-6415.130420382195
+municipality_Westfield,-6100.497972858863
+county_Ocean,-5865.41764575297
+property_type_Single Family,4730.903621976222
+municipality_New Brunswick,-4719.145617536201
+municipality_Long Branch,-4244.041067984888
+municipality_Wildwood,4215.131491493141
+municipality_Newark,4037.254522021469
+municipality_Cape May,-2648.5063120562404
+municipality_Ewing,2509.788351539949
+municipality_Readington,2096.905017214767
+municipality_Clinton,-2081.601776267041
+municipality_Red Bank,-1535.2605567686885
+municipality_West New York,-1338.6091309961455
+municipality_Princeton,-1236.7381580476128
+municipality_Old Bridge,-1108.2742522827261
+municipality_Englewood,-295.34660440342
+municipality_Cranford,117.2869059692294
