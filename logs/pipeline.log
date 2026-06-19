@@ -1,0 +1,449 @@
+2026-06-16 17:04:56 | INFO    | matplotlib.font_manager | Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+2026-06-16 17:04:56 | INFO    | matplotlib.font_manager | generated new fontManager
+2026-06-16 17:05:00 | INFO    | __main__ | ───── Phase 1: SCRAPE ─────
+2026-06-16 17:05:00 | INFO    | src.scraper.orchestrator | OFFLINE mode — generating synthetic NJ listings
+2026-06-16 17:05:00 | INFO    | src.scraper.synthetic | synthetic generator produced 6017 listings across 21 counties
+2026-06-16 17:05:01 | INFO    | src.scraper.orchestrator | deduplication: 6017 → 6017 rows
+2026-06-16 17:05:01 | INFO    | src.scraper.orchestrator | wrote raw scrape: {'csv': PosixPath('/home/claude/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_170501.csv'), 'parquet': PosixPath('/home/claude/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_170501.parquet')}
+2026-06-16 17:05:01 | INFO    | __main__ | ───── Phase 2: CLEAN ─────
+2026-06-16 17:05:01 | INFO    | src.cleaning.clean | loaded raw: 6017 rows × 17 cols
+2026-06-16 17:05:01 | INFO    | src.cleaning.clean | cleaned: 6014 rows → /home/claude/nj-housing-pricing-model/data/interim/nj_housing_clean.parquet
+2026-06-16 17:05:01 | INFO    | src.cleaning.clean | wrote data-quality report: /home/claude/nj-housing-pricing-model/reports/data_quality_report.md
+2026-06-16 17:05:01 | INFO    | __main__ | clean metrics: {'input_rows': 6017, 'duplicates_removed': 0, 'price_outliers_removed': 3, 'invalid_zips_dropped': 0, 'invalid_counties_dropped': 0, 'output_rows': 6014, 'completeness_pct': 95.80146325241104}
+2026-06-16 17:05:01 | INFO    | __main__ | ───── Phase 3: GEOCODE ─────
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 500/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 1000/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 1500/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 2000/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 2500/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 3000/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 3500/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 4000/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 4500/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 5000/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 5500/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded 6000/6014
+2026-06-16 17:05:01 | INFO    | src.geocoding.geocode | geocoded: 6014 rows → /home/claude/nj-housing-pricing-model/data/interim/nj_housing_geocoded.parquet
+2026-06-16 17:05:01 | INFO    | __main__ | ───── Phase 4: SEGMENT ─────
+2026-06-16 17:05:01 | INFO    | src.segmentation.segment | ZIP clusters: 109 unique (incl. small-zip fallbacks)
+2026-06-16 17:05:01 | INFO    | src.segmentation.segment | corridor breakdown:
+corridor
+Other                    2455
+NYC Corridor             2096
+Philadelphia Corridor    1463
+2026-06-16 17:05:01 | INFO    | src.segmentation.segment | segmented: 6014 rows → /home/claude/nj-housing-pricing-model/data/processed/nj_housing_segmented.parquet
+2026-06-16 17:05:01 | INFO    | __main__ | ───── Phase 5: PRICING ANALYTICS ─────
+2026-06-16 17:05:01 | INFO    | src.pricing.pricing_analytics | [county] wrote 21 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_county.csv
+2026-06-16 17:05:29 | INFO    | __main__ | ───── Phase 1: SCRAPE ─────
+2026-06-16 17:05:29 | INFO    | src.scraper.orchestrator | OFFLINE mode — generating synthetic NJ listings
+2026-06-16 17:05:30 | INFO    | src.scraper.synthetic | synthetic generator produced 6017 listings across 21 counties
+2026-06-16 17:05:30 | INFO    | src.scraper.orchestrator | deduplication: 6017 → 6017 rows
+2026-06-16 17:05:30 | INFO    | src.scraper.orchestrator | wrote raw scrape: {'csv': PosixPath('/home/claude/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_170530.csv'), 'parquet': PosixPath('/home/claude/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_170530.parquet')}
+2026-06-16 17:05:30 | INFO    | __main__ | ───── Phase 2: CLEAN ─────
+2026-06-16 17:05:30 | INFO    | src.cleaning.clean | loaded raw: 6017 rows × 17 cols
+2026-06-16 17:05:30 | INFO    | src.cleaning.clean | cleaned: 6014 rows → /home/claude/nj-housing-pricing-model/data/interim/nj_housing_clean.parquet
+2026-06-16 17:05:30 | INFO    | src.cleaning.clean | wrote data-quality report: /home/claude/nj-housing-pricing-model/reports/data_quality_report.md
+2026-06-16 17:05:30 | INFO    | __main__ | clean metrics: {'input_rows': 6017, 'duplicates_removed': 0, 'price_outliers_removed': 3, 'invalid_zips_dropped': 0, 'invalid_counties_dropped': 0, 'output_rows': 6014, 'completeness_pct': 95.80146325241104}
+2026-06-16 17:05:30 | INFO    | __main__ | ───── Phase 3: GEOCODE ─────
+2026-06-16 17:05:30 | INFO    | src.geocoding.geocode | geocoded: 6014 rows → /home/claude/nj-housing-pricing-model/data/interim/nj_housing_geocoded.parquet
+2026-06-16 17:05:30 | INFO    | __main__ | ───── Phase 4: SEGMENT ─────
+2026-06-16 17:05:30 | INFO    | src.segmentation.segment | ZIP clusters: 109 unique (incl. small-zip fallbacks)
+2026-06-16 17:05:30 | INFO    | src.segmentation.segment | corridor breakdown:
+corridor
+Other                    2455
+NYC Corridor             2096
+Philadelphia Corridor    1463
+2026-06-16 17:05:30 | INFO    | src.segmentation.segment | segmented: 6014 rows → /home/claude/nj-housing-pricing-model/data/processed/nj_housing_segmented.parquet
+2026-06-16 17:05:30 | INFO    | __main__ | ───── Phase 5: PRICING ANALYTICS ─────
+2026-06-16 17:05:30 | INFO    | src.pricing.pricing_analytics | [county] wrote 21 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_county.csv
+2026-06-16 17:05:31 | INFO    | src.pricing.pricing_analytics | [municipality] wrote 112 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_municipality.csv
+2026-06-16 17:05:36 | INFO    | src.pricing.pricing_analytics | [zip_cluster] wrote 598 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_zip_cluster.csv
+2026-06-16 17:05:36 | INFO    | src.pricing.pricing_analytics | building final pricing matrix
+2026-06-16 17:05:36 | INFO    | src.pricing.pricing_analytics | wrote pricing matrix (598 markets × 17 cells) → /home/claude/nj-housing-pricing-model/outputs/pricing_matrix.csv
+2026-06-16 17:05:36 | INFO    | __main__ | ───── Phase 6: HEDONIC MODEL ─────
+2026-06-16 17:05:37 | INFO    | src.modeling.hedonic_model | wrote model evaluation report → /home/claude/nj-housing-pricing-model/reports/model_evaluation_report.md
+2026-06-16 17:05:37 | INFO    | __main__ | model results: {'linear': {'test_metrics': {'MAE': 163323.95331656825, 'RMSE': 271789.8341896345, 'R2': 0.18017087624191797}, 'cv_r2_mean': 0.11545344542770679, 'cv_r2_std': 0.09777390096606046, 'cv_mae_mean': 175217.30491076078}, 'ridge': {'best_alpha': 100.0, 'test_metrics': {'MAE': 159746.0656150477, 'RMSE': 263599.93227189884, 'R2': 0.22883463956311711}, 'cv_r2_mean': 0.11507269741139307}}
+2026-06-16 17:05:37 | INFO    | __main__ | ───── Phase 7: CLUSTERING ─────
+2026-06-16 17:05:38 | INFO    | src.modeling.clustering | k-means: chose k=4 (elbow scan over [2, 8])
+2026-06-16 17:05:38 | INFO    | src.modeling.clustering | clustered: 6014 rows → /home/claude/nj-housing-pricing-model/data/processed/listings_with_tier.parquet
+2026-06-16 17:05:38 | INFO    | __main__ | ───── Phase 8: CHARTS ─────
+2026-06-16 17:05:41 | INFO    | src.visualization.charts | wrote 8 chart files to /home/claude/nj-housing-pricing-model/reports/figures
+2026-06-16 17:05:41 | INFO    | __main__ | ───── Phase 9: MAP ─────
+2026-06-16 17:05:41 | WARNING | src.visualization.map | no county GeoJSON at /home/claude/nj-housing-pricing-model/data/external/nj_counties.geojson — falling back to centroid markers only
+2026-06-16 17:05:49 | INFO    | src.visualization.map | wrote interactive map: /home/claude/nj-housing-pricing-model/outputs/nj_housing_map.html
+2026-06-16 17:05:49 | INFO    | __main__ | ───── Phase 10: DECK ─────
+2026-06-16 17:05:49 | INFO    | src.reporting.deck | wrote summary deck: /home/claude/nj-housing-pricing-model/reports/summary_deck.pptx
+2026-06-16 17:05:49 | INFO    | __main__ | PIPELINE COMPLETE in 20.0s
+2026-06-16 17:06:30 | INFO    | __main__ | ───── Phase 1: SCRAPE ─────
+2026-06-16 17:06:30 | INFO    | src.scraper.orchestrator | OFFLINE mode — generating synthetic NJ listings
+2026-06-16 17:06:30 | INFO    | src.scraper.synthetic | synthetic generator produced 6017 listings across 21 counties
+2026-06-16 17:06:30 | INFO    | src.scraper.orchestrator | deduplication: 6017 → 6017 rows
+2026-06-16 17:06:30 | INFO    | src.scraper.orchestrator | wrote raw scrape: {'csv': PosixPath('/home/claude/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_170630.csv'), 'parquet': PosixPath('/home/claude/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_170630.parquet')}
+2026-06-16 17:06:30 | INFO    | __main__ | ───── Phase 2: CLEAN ─────
+2026-06-16 17:06:30 | INFO    | src.cleaning.clean | loaded raw: 6017 rows × 17 cols
+2026-06-16 17:06:30 | INFO    | src.cleaning.clean | cleaned: 6012 rows → /home/claude/nj-housing-pricing-model/data/interim/nj_housing_clean.parquet
+2026-06-16 17:06:30 | INFO    | src.cleaning.clean | wrote data-quality report: /home/claude/nj-housing-pricing-model/reports/data_quality_report.md
+2026-06-16 17:06:30 | INFO    | __main__ | clean metrics: {'input_rows': 6017, 'duplicates_removed': 0, 'price_outliers_removed': 5, 'invalid_zips_dropped': 0, 'invalid_counties_dropped': 0, 'output_rows': 6012, 'completeness_pct': 95.80089820359281}
+2026-06-16 17:06:30 | INFO    | __main__ | ───── Phase 3: GEOCODE ─────
+2026-06-16 17:06:30 | INFO    | src.geocoding.geocode | geocoded: 6012 rows → /home/claude/nj-housing-pricing-model/data/interim/nj_housing_geocoded.parquet
+2026-06-16 17:06:30 | INFO    | __main__ | ───── Phase 4: SEGMENT ─────
+2026-06-16 17:06:31 | INFO    | src.segmentation.segment | ZIP clusters: 109 unique (incl. small-zip fallbacks)
+2026-06-16 17:06:31 | INFO    | src.segmentation.segment | corridor breakdown:
+corridor
+Other                    2454
+NYC Corridor             2095
+Philadelphia Corridor    1463
+2026-06-16 17:06:31 | INFO    | src.segmentation.segment | segmented: 6012 rows → /home/claude/nj-housing-pricing-model/data/processed/nj_housing_segmented.parquet
+2026-06-16 17:06:31 | INFO    | __main__ | ───── Phase 5: PRICING ANALYTICS ─────
+2026-06-16 17:06:31 | INFO    | src.pricing.pricing_analytics | [county] wrote 21 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_county.csv
+2026-06-16 17:06:32 | INFO    | src.pricing.pricing_analytics | [municipality] wrote 112 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_municipality.csv
+2026-06-16 17:06:37 | INFO    | src.pricing.pricing_analytics | [zip_cluster] wrote 598 rows → /home/claude/nj-housing-pricing-model/data/processed/pricing_by_zip_cluster.csv
+2026-06-16 17:06:37 | INFO    | src.pricing.pricing_analytics | building final pricing matrix
+2026-06-16 17:06:37 | INFO    | src.pricing.pricing_analytics | wrote pricing matrix (598 markets × 17 cells) → /home/claude/nj-housing-pricing-model/outputs/pricing_matrix.csv
+2026-06-16 17:06:37 | INFO    | __main__ | ───── Phase 6: HEDONIC MODEL ─────
+2026-06-16 17:06:38 | INFO    | src.modeling.hedonic_model | wrote model evaluation report → /home/claude/nj-housing-pricing-model/reports/model_evaluation_report.md
+2026-06-16 17:06:38 | INFO    | __main__ | model results: {'linear': {'test_metrics': {'MAE': 105988.82680770509, 'RMSE': 226508.2407167758, 'R2': 0.47349720594337974}, 'cv_r2_mean': 0.4196867101322107, 'cv_r2_std': 0.21206984549623412, 'cv_mae_mean': 108934.29270332039}, 'ridge': {'best_alpha': 100.0, 'test_metrics': {'MAE': 100739.12584138756, 'RMSE': 220999.33321578224, 'R2': 0.4987959252601333}, 'cv_r2_mean': 0.40879456521854796}}
+2026-06-16 17:06:38 | INFO    | __main__ | ───── Phase 7: CLUSTERING ─────
+2026-06-16 17:06:39 | INFO    | src.modeling.clustering | k-means: chose k=4 (elbow scan over [2, 8])
+2026-06-16 17:06:39 | INFO    | src.modeling.clustering | clustered: 6012 rows → /home/claude/nj-housing-pricing-model/data/processed/listings_with_tier.parquet
+2026-06-16 17:06:39 | INFO    | __main__ | ───── Phase 8: CHARTS ─────
+2026-06-16 17:06:41 | INFO    | src.visualization.charts | wrote 8 chart files to /home/claude/nj-housing-pricing-model/reports/figures
+2026-06-16 17:06:41 | INFO    | __main__ | ───── Phase 9: MAP ─────
+2026-06-16 17:06:41 | WARNING | src.visualization.map | no county GeoJSON at /home/claude/nj-housing-pricing-model/data/external/nj_counties.geojson — falling back to centroid markers only
+2026-06-16 17:06:49 | INFO    | src.visualization.map | wrote interactive map: /home/claude/nj-housing-pricing-model/outputs/nj_housing_map.html
+2026-06-16 17:06:49 | INFO    | __main__ | ───── Phase 10: DECK ─────
+2026-06-16 17:06:49 | INFO    | src.reporting.deck | wrote summary deck: /home/claude/nj-housing-pricing-model/reports/summary_deck.pptx
+2026-06-16 17:06:49 | INFO    | __main__ | PIPELINE COMPLETE in 19.2s
+2026-06-16 17:10:15 | INFO    | src.reporting.deck | wrote summary deck: /home/claude/nj-housing-pricing-model/reports/summary_deck.pptx
+2026-06-17 00:06:59 | INFO    | __main__ | ───── Phase 1: SCRAPE ─────
+2026-06-17 00:06:59 | INFO    | src.scraper.orchestrator | OFFLINE mode — generating synthetic NJ listings
+2026-06-17 00:07:00 | INFO    | src.scraper.synthetic | synthetic generator produced 6017 listings across 21 counties
+2026-06-17 00:07:00 | INFO    | src.scraper.orchestrator | deduplication: 6017 → 6017 rows
+2026-06-17 00:07:00 | INFO    | src.scraper.orchestrator | wrote raw scrape: {'csv': PosixPath('/home/arundatinair/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_183700.csv'), 'parquet': PosixPath('/home/arundatinair/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_183700.parquet')}
+2026-06-17 00:07:00 | INFO    | __main__ | ───── Phase 2: CLEAN ─────
+2026-06-17 00:07:00 | INFO    | src.cleaning.clean | loaded raw: 6017 rows × 17 cols
+2026-06-17 00:07:00 | INFO    | src.cleaning.clean | cleaned: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/interim/nj_housing_clean.parquet
+2026-06-17 00:07:00 | INFO    | src.cleaning.clean | wrote data-quality report: /home/arundatinair/nj-housing-pricing-model/reports/data_quality_report.md
+2026-06-17 00:07:00 | INFO    | __main__ | clean metrics: {'input_rows': 6017, 'duplicates_removed': 0, 'price_outliers_removed': 5, 'invalid_zips_dropped': 0, 'invalid_counties_dropped': 0, 'output_rows': 6012, 'completeness_pct': 95.80089820359281}
+2026-06-17 00:07:00 | INFO    | __main__ | ───── Phase 3: GEOCODE ─────
+2026-06-17 00:07:00 | INFO    | src.geocoding.geocode | geocoded: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/interim/nj_housing_geocoded.parquet
+2026-06-17 00:07:00 | INFO    | __main__ | ───── Phase 4: SEGMENT ─────
+2026-06-17 00:07:00 | INFO    | src.segmentation.segment | ZIP clusters: 109 unique (incl. small-zip fallbacks)
+2026-06-17 00:07:00 | INFO    | src.segmentation.segment | corridor breakdown:
+corridor
+Other                    2454
+NYC Corridor             2095
+Philadelphia Corridor    1463
+2026-06-17 00:07:00 | INFO    | src.segmentation.segment | segmented: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/nj_housing_segmented.parquet
+2026-06-17 00:07:00 | INFO    | __main__ | ───── Phase 5: PRICING ANALYTICS ─────
+2026-06-17 00:07:00 | INFO    | src.pricing.pricing_analytics | [county] wrote 21 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_county.csv
+2026-06-17 00:07:01 | INFO    | src.pricing.pricing_analytics | [municipality] wrote 112 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_municipality.csv
+2026-06-17 00:07:04 | INFO    | src.pricing.pricing_analytics | [zip_cluster] wrote 598 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_zip_cluster.csv
+2026-06-17 00:07:04 | INFO    | src.pricing.pricing_analytics | building final pricing matrix
+2026-06-17 00:07:04 | INFO    | src.pricing.pricing_analytics | wrote pricing matrix (598 markets × 17 cells) → /home/arundatinair/nj-housing-pricing-model/outputs/pricing_matrix.csv
+2026-06-17 00:07:04 | INFO    | __main__ | ───── Phase 6: HEDONIC MODEL ─────
+2026-06-17 00:07:05 | INFO    | src.modeling.hedonic_model | wrote model evaluation report → /home/arundatinair/nj-housing-pricing-model/reports/model_evaluation_report.md
+2026-06-17 00:07:05 | INFO    | __main__ | model results: {'linear': {'test_metrics': {'MAE': 105988.82530608302, 'RMSE': 226508.237986192, 'R2': 0.4734972186374873}, 'cv_r2_mean': 0.41968674655854193, 'cv_r2_std': 0.21206988880408711, 'cv_mae_mean': 108934.28716166462}, 'ridge': {'best_alpha': 100.0, 'test_metrics': {'MAE': 100739.14175090798, 'RMSE': 220999.34402539022, 'R2': 0.4987958762299427}, 'cv_r2_mean': 0.40879460543394963}}
+2026-06-17 00:07:05 | INFO    | __main__ | ───── Phase 7: CLUSTERING ─────
+2026-06-17 00:07:07 | INFO    | src.modeling.clustering | k-means: chose k=4 (elbow scan over [2, 8])
+2026-06-17 00:07:07 | INFO    | src.modeling.clustering | clustered: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/listings_with_tier.parquet
+2026-06-17 00:07:07 | INFO    | __main__ | ───── Phase 8: CHARTS ─────
+2026-06-17 00:07:09 | INFO    | src.visualization.charts | wrote 8 chart files to /home/arundatinair/nj-housing-pricing-model/reports/figures
+2026-06-17 00:07:09 | INFO    | __main__ | ───── Phase 9: MAP ─────
+2026-06-17 00:07:09 | WARNING | src.visualization.map | no county GeoJSON at /home/arundatinair/nj-housing-pricing-model/data/external/nj_counties.geojson — falling back to centroid markers only
+2026-06-17 00:07:15 | INFO    | src.visualization.map | wrote interactive map: /home/arundatinair/nj-housing-pricing-model/outputs/nj_housing_map.html
+2026-06-17 00:07:15 | INFO    | __main__ | ───── Phase 10: DECK ─────
+2026-06-17 00:07:15 | INFO    | src.reporting.deck | wrote summary deck: /home/arundatinair/nj-housing-pricing-model/reports/summary_deck.pptx
+2026-06-17 00:07:15 | INFO    | __main__ | PIPELINE COMPLETE in 15.5s
+2026-06-17 00:07:18 | INFO    | __main__ | ───── Phase 1: SCRAPE ─────
+2026-06-17 00:07:18 | INFO    | src.scraper.orchestrator | LIVE scrape across 21 NJ counties
+2026-06-17 00:07:18 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Atlantic County, NJ
+2026-06-17 00:07:18 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Atlantic+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:18 | WARNING | src.scraper.orchestrator | [zillow] blocked on Atlantic — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:18 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Atlantic County, NJ
+2026-06-17 00:07:19 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Atlantic-County_NJ/pg-1
+2026-06-17 00:07:19 | WARNING | src.scraper.orchestrator | [realtor] blocked on Atlantic — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:19 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Atlantic County, NJ
+2026-06-17 00:07:20 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:20 | WARNING | src.scraper.orchestrator | [redfin] blocked on Atlantic — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:20 | ERROR   | src.scraper.orchestrator | ALL sources failed for Atlantic (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:20 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Bergen County, NJ
+2026-06-17 00:07:21 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Bergen+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:21 | WARNING | src.scraper.orchestrator | [zillow] blocked on Bergen — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:21 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Bergen County, NJ
+2026-06-17 00:07:21 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Bergen-County_NJ/pg-1
+2026-06-17 00:07:21 | WARNING | src.scraper.orchestrator | [realtor] blocked on Bergen — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:21 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Bergen County, NJ
+2026-06-17 00:07:22 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:22 | WARNING | src.scraper.orchestrator | [redfin] blocked on Bergen — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:22 | ERROR   | src.scraper.orchestrator | ALL sources failed for Bergen (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:22 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Burlington County, NJ
+2026-06-17 00:07:23 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Burlington+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:23 | WARNING | src.scraper.orchestrator | [zillow] blocked on Burlington — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:23 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Burlington County, NJ
+2026-06-17 00:07:24 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Burlington-County_NJ/pg-1
+2026-06-17 00:07:24 | WARNING | src.scraper.orchestrator | [realtor] blocked on Burlington — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:24 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Burlington County, NJ
+2026-06-17 00:07:24 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:24 | WARNING | src.scraper.orchestrator | [redfin] blocked on Burlington — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:24 | ERROR   | src.scraper.orchestrator | ALL sources failed for Burlington (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:24 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Camden County, NJ
+2026-06-17 00:07:26 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Camden+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:26 | WARNING | src.scraper.orchestrator | [zillow] blocked on Camden — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:26 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Camden County, NJ
+2026-06-17 00:07:26 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Camden-County_NJ/pg-1
+2026-06-17 00:07:26 | WARNING | src.scraper.orchestrator | [realtor] blocked on Camden — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:26 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Camden County, NJ
+2026-06-17 00:07:27 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:27 | WARNING | src.scraper.orchestrator | [redfin] blocked on Camden — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:27 | ERROR   | src.scraper.orchestrator | ALL sources failed for Camden (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:27 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Cape May County, NJ
+2026-06-17 00:07:28 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Cape+May+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:28 | WARNING | src.scraper.orchestrator | [zillow] blocked on Cape May — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:28 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Cape May County, NJ
+2026-06-17 00:07:29 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Cape-May-County_NJ/pg-1
+2026-06-17 00:07:29 | WARNING | src.scraper.orchestrator | [realtor] blocked on Cape May — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:29 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Cape May County, NJ
+2026-06-17 00:07:29 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:29 | WARNING | src.scraper.orchestrator | [redfin] blocked on Cape May — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:29 | ERROR   | src.scraper.orchestrator | ALL sources failed for Cape May (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:29 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Cumberland County, NJ
+2026-06-17 00:07:33 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Cumberland+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:33 | WARNING | src.scraper.orchestrator | [zillow] blocked on Cumberland — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:33 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Cumberland County, NJ
+2026-06-17 00:07:34 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Cumberland-County_NJ/pg-1
+2026-06-17 00:07:34 | WARNING | src.scraper.orchestrator | [realtor] blocked on Cumberland — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:34 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Cumberland County, NJ
+2026-06-17 00:07:34 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:34 | WARNING | src.scraper.orchestrator | [redfin] blocked on Cumberland — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:34 | ERROR   | src.scraper.orchestrator | ALL sources failed for Cumberland (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:34 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Essex County, NJ
+2026-06-17 00:07:36 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Essex+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:36 | WARNING | src.scraper.orchestrator | [zillow] blocked on Essex — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:36 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Essex County, NJ
+2026-06-17 00:07:36 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Essex-County_NJ/pg-1
+2026-06-17 00:07:36 | WARNING | src.scraper.orchestrator | [realtor] blocked on Essex — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:36 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Essex County, NJ
+2026-06-17 00:07:36 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:36 | WARNING | src.scraper.orchestrator | [redfin] blocked on Essex — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:36 | ERROR   | src.scraper.orchestrator | ALL sources failed for Essex (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:36 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Gloucester County, NJ
+2026-06-17 00:07:39 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Gloucester+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:39 | WARNING | src.scraper.orchestrator | [zillow] blocked on Gloucester — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:39 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Gloucester County, NJ
+2026-06-17 00:07:39 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Gloucester-County_NJ/pg-1
+2026-06-17 00:07:39 | WARNING | src.scraper.orchestrator | [realtor] blocked on Gloucester — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:39 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Gloucester County, NJ
+2026-06-17 00:07:39 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:39 | WARNING | src.scraper.orchestrator | [redfin] blocked on Gloucester — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:39 | ERROR   | src.scraper.orchestrator | ALL sources failed for Gloucester (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:39 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Hudson County, NJ
+2026-06-17 00:07:41 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Hudson+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:41 | WARNING | src.scraper.orchestrator | [zillow] blocked on Hudson — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:41 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Hudson County, NJ
+2026-06-17 00:07:41 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Hudson-County_NJ/pg-1
+2026-06-17 00:07:41 | WARNING | src.scraper.orchestrator | [realtor] blocked on Hudson — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:41 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Hudson County, NJ
+2026-06-17 00:07:41 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:41 | WARNING | src.scraper.orchestrator | [redfin] blocked on Hudson — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:41 | ERROR   | src.scraper.orchestrator | ALL sources failed for Hudson (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:41 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Hunterdon County, NJ
+2026-06-17 00:07:43 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Hunterdon+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:43 | WARNING | src.scraper.orchestrator | [zillow] blocked on Hunterdon — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:43 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Hunterdon County, NJ
+2026-06-17 00:07:44 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Hunterdon-County_NJ/pg-1
+2026-06-17 00:07:44 | WARNING | src.scraper.orchestrator | [realtor] blocked on Hunterdon — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:44 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Hunterdon County, NJ
+2026-06-17 00:07:44 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:44 | WARNING | src.scraper.orchestrator | [redfin] blocked on Hunterdon — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:44 | ERROR   | src.scraper.orchestrator | ALL sources failed for Hunterdon (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:44 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Mercer County, NJ
+2026-06-17 00:07:46 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Mercer+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:46 | WARNING | src.scraper.orchestrator | [zillow] blocked on Mercer — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:46 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Mercer County, NJ
+2026-06-17 00:07:46 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Mercer-County_NJ/pg-1
+2026-06-17 00:07:46 | WARNING | src.scraper.orchestrator | [realtor] blocked on Mercer — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:46 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Mercer County, NJ
+2026-06-17 00:07:46 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:46 | WARNING | src.scraper.orchestrator | [redfin] blocked on Mercer — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:46 | ERROR   | src.scraper.orchestrator | ALL sources failed for Mercer (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:46 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Middlesex County, NJ
+2026-06-17 00:07:48 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Middlesex+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:48 | WARNING | src.scraper.orchestrator | [zillow] blocked on Middlesex — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:48 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Middlesex County, NJ
+2026-06-17 00:07:49 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Middlesex-County_NJ/pg-1
+2026-06-17 00:07:49 | WARNING | src.scraper.orchestrator | [realtor] blocked on Middlesex — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:49 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Middlesex County, NJ
+2026-06-17 00:07:49 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:49 | WARNING | src.scraper.orchestrator | [redfin] blocked on Middlesex — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:49 | ERROR   | src.scraper.orchestrator | ALL sources failed for Middlesex (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:49 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Monmouth County, NJ
+2026-06-17 00:07:51 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Monmouth+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:51 | WARNING | src.scraper.orchestrator | [zillow] blocked on Monmouth — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:51 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Monmouth County, NJ
+2026-06-17 00:07:51 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Monmouth-County_NJ/pg-1
+2026-06-17 00:07:51 | WARNING | src.scraper.orchestrator | [realtor] blocked on Monmouth — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:51 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Monmouth County, NJ
+2026-06-17 00:07:51 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:51 | WARNING | src.scraper.orchestrator | [redfin] blocked on Monmouth — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:51 | ERROR   | src.scraper.orchestrator | ALL sources failed for Monmouth (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:51 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Morris County, NJ
+2026-06-17 00:07:53 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Morris+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:53 | WARNING | src.scraper.orchestrator | [zillow] blocked on Morris — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:53 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Morris County, NJ
+2026-06-17 00:07:54 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Morris-County_NJ/pg-1
+2026-06-17 00:07:54 | WARNING | src.scraper.orchestrator | [realtor] blocked on Morris — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:54 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Morris County, NJ
+2026-06-17 00:07:54 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:54 | WARNING | src.scraper.orchestrator | [redfin] blocked on Morris — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:54 | ERROR   | src.scraper.orchestrator | ALL sources failed for Morris (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:54 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Ocean County, NJ
+2026-06-17 00:07:56 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Ocean+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:56 | WARNING | src.scraper.orchestrator | [zillow] blocked on Ocean — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:56 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Ocean County, NJ
+2026-06-17 00:07:56 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Ocean-County_NJ/pg-1
+2026-06-17 00:07:56 | WARNING | src.scraper.orchestrator | [realtor] blocked on Ocean — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:56 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Ocean County, NJ
+2026-06-17 00:07:56 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:56 | WARNING | src.scraper.orchestrator | [redfin] blocked on Ocean — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:56 | ERROR   | src.scraper.orchestrator | ALL sources failed for Ocean (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:56 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Passaic County, NJ
+2026-06-17 00:07:58 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Passaic+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:07:58 | WARNING | src.scraper.orchestrator | [zillow] blocked on Passaic — falling over: zillow blocked: HTTP 403
+2026-06-17 00:07:58 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Passaic County, NJ
+2026-06-17 00:07:59 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Passaic-County_NJ/pg-1
+2026-06-17 00:07:59 | WARNING | src.scraper.orchestrator | [realtor] blocked on Passaic — falling over: realtor blocked: HTTP 429
+2026-06-17 00:07:59 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Passaic County, NJ
+2026-06-17 00:07:59 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:07:59 | WARNING | src.scraper.orchestrator | [redfin] blocked on Passaic — falling over: redfin blocked: HTTP 403
+2026-06-17 00:07:59 | ERROR   | src.scraper.orchestrator | ALL sources failed for Passaic (last error: redfin blocked: HTTP 403)
+2026-06-17 00:07:59 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Salem County, NJ
+2026-06-17 00:08:01 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Salem+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:08:01 | WARNING | src.scraper.orchestrator | [zillow] blocked on Salem — falling over: zillow blocked: HTTP 403
+2026-06-17 00:08:01 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Salem County, NJ
+2026-06-17 00:08:01 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Salem-County_NJ/pg-1
+2026-06-17 00:08:01 | WARNING | src.scraper.orchestrator | [realtor] blocked on Salem — falling over: realtor blocked: HTTP 429
+2026-06-17 00:08:01 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Salem County, NJ
+2026-06-17 00:08:01 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:08:01 | WARNING | src.scraper.orchestrator | [redfin] blocked on Salem — falling over: redfin blocked: HTTP 403
+2026-06-17 00:08:01 | ERROR   | src.scraper.orchestrator | ALL sources failed for Salem (last error: redfin blocked: HTTP 403)
+2026-06-17 00:08:01 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Somerset County, NJ
+2026-06-17 00:08:03 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Somerset+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:08:03 | WARNING | src.scraper.orchestrator | [zillow] blocked on Somerset — falling over: zillow blocked: HTTP 403
+2026-06-17 00:08:03 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Somerset County, NJ
+2026-06-17 00:08:04 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Somerset-County_NJ/pg-1
+2026-06-17 00:08:04 | WARNING | src.scraper.orchestrator | [realtor] blocked on Somerset — falling over: realtor blocked: HTTP 429
+2026-06-17 00:08:04 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Somerset County, NJ
+2026-06-17 00:08:04 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:08:04 | WARNING | src.scraper.orchestrator | [redfin] blocked on Somerset — falling over: redfin blocked: HTTP 403
+2026-06-17 00:08:04 | ERROR   | src.scraper.orchestrator | ALL sources failed for Somerset (last error: redfin blocked: HTTP 403)
+2026-06-17 00:08:04 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Sussex County, NJ
+2026-06-17 00:08:07 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Sussex+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:08:07 | WARNING | src.scraper.orchestrator | [zillow] blocked on Sussex — falling over: zillow blocked: HTTP 403
+2026-06-17 00:08:07 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Sussex County, NJ
+2026-06-17 00:08:07 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Sussex-County_NJ/pg-1
+2026-06-17 00:08:07 | WARNING | src.scraper.orchestrator | [realtor] blocked on Sussex — falling over: realtor blocked: HTTP 429
+2026-06-17 00:08:07 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Sussex County, NJ
+2026-06-17 00:08:07 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:08:07 | WARNING | src.scraper.orchestrator | [redfin] blocked on Sussex — falling over: redfin blocked: HTTP 403
+2026-06-17 00:08:07 | ERROR   | src.scraper.orchestrator | ALL sources failed for Sussex (last error: redfin blocked: HTTP 403)
+2026-06-17 00:08:07 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Union County, NJ
+2026-06-17 00:08:08 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Union+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:08:08 | WARNING | src.scraper.orchestrator | [zillow] blocked on Union — falling over: zillow blocked: HTTP 403
+2026-06-17 00:08:08 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Union County, NJ
+2026-06-17 00:08:09 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Union-County_NJ/pg-1
+2026-06-17 00:08:09 | WARNING | src.scraper.orchestrator | [realtor] blocked on Union — falling over: realtor blocked: HTTP 429
+2026-06-17 00:08:09 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Union County, NJ
+2026-06-17 00:08:10 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:08:10 | WARNING | src.scraper.orchestrator | [redfin] blocked on Union — falling over: redfin blocked: HTTP 403
+2026-06-17 00:08:10 | ERROR   | src.scraper.orchestrator | ALL sources failed for Union (last error: redfin blocked: HTTP 403)
+2026-06-17 00:08:10 | INFO    | src.scraper.zillow_scraper | [zillow] fetching Warren County, NJ
+2026-06-17 00:08:11 | WARNING | src.scraper.base_scraper | [zillow] blocked (HTTP 403) on https://www.zillow.com/search/GetSearchPageState.htm?searchQueryState=%7B%22usersSearchTerm%22%3A+%22Warren+County+NJ%22%2C+%22filterState%22%3A+%7B%22sortSelection%22%3A+%7B%22value%22%3A+%22globalrelevanceex%22%7D%7D%2C+%22isListVisible%22%3A+true%2C+%22pagination%22%3A+%7B%22currentPage%22%3A+1%7D%7D&wants=%7B%22cat1%22%3A+%5B%22listResults%22%5D%7D&requestId=1
+2026-06-17 00:08:11 | WARNING | src.scraper.orchestrator | [zillow] blocked on Warren — falling over: zillow blocked: HTTP 403
+2026-06-17 00:08:11 | INFO    | src.scraper.realtor_scraper | [realtor] fetching Warren County, NJ
+2026-06-17 00:08:12 | WARNING | src.scraper.base_scraper | [realtor] blocked (HTTP 429) on https://www.realtor.com/realestateandhomes-search/Warren-County_NJ/pg-1
+2026-06-17 00:08:12 | WARNING | src.scraper.orchestrator | [realtor] blocked on Warren — falling over: realtor blocked: HTTP 429
+2026-06-17 00:08:12 | INFO    | src.scraper.redfin_scraper | [redfin] fetching Warren County, NJ
+2026-06-17 00:08:12 | WARNING | src.scraper.base_scraper | [redfin] blocked (HTTP 403) on https://www.redfin.com/stingray/do/location-autocomplete
+2026-06-17 00:08:12 | WARNING | src.scraper.orchestrator | [redfin] blocked on Warren — falling over: redfin blocked: HTTP 403
+2026-06-17 00:08:12 | ERROR   | src.scraper.orchestrator | ALL sources failed for Warren (last error: redfin blocked: HTTP 403)
+2026-06-17 00:08:12 | WARNING | src.scraper.orchestrator | Live scrape returned 0 rows — falling back to synthetic generator
+2026-06-17 00:08:12 | INFO    | src.scraper.synthetic | synthetic generator produced 6017 listings across 21 counties
+2026-06-17 00:08:12 | INFO    | src.scraper.orchestrator | deduplication: 6017 → 6017 rows
+2026-06-17 00:08:12 | INFO    | src.scraper.orchestrator | wrote raw scrape: {'csv': PosixPath('/home/arundatinair/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_183812.csv'), 'parquet': PosixPath('/home/arundatinair/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_183812.parquet')}
+2026-06-17 00:08:12 | INFO    | __main__ | ───── Phase 2: CLEAN ─────
+2026-06-17 00:08:12 | INFO    | src.cleaning.clean | loaded raw: 6017 rows × 17 cols
+2026-06-17 00:08:13 | INFO    | src.cleaning.clean | cleaned: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/interim/nj_housing_clean.parquet
+2026-06-17 00:08:13 | INFO    | src.cleaning.clean | wrote data-quality report: /home/arundatinair/nj-housing-pricing-model/reports/data_quality_report.md
+2026-06-17 00:08:13 | INFO    | __main__ | clean metrics: {'input_rows': 6017, 'duplicates_removed': 0, 'price_outliers_removed': 5, 'invalid_zips_dropped': 0, 'invalid_counties_dropped': 0, 'output_rows': 6012, 'completeness_pct': 95.80089820359281}
+2026-06-17 00:08:13 | INFO    | __main__ | ───── Phase 3: GEOCODE ─────
+2026-06-17 00:08:13 | INFO    | src.geocoding.geocode | live geocoding ENABLED (provider=nominatim)
+2026-06-17 00:08:13 | INFO    | src.geocoding.geocode | geocoded: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/interim/nj_housing_geocoded.parquet
+2026-06-17 00:08:13 | INFO    | __main__ | ───── Phase 4: SEGMENT ─────
+2026-06-17 00:08:13 | INFO    | src.segmentation.segment | ZIP clusters: 109 unique (incl. small-zip fallbacks)
+2026-06-17 00:08:13 | INFO    | src.segmentation.segment | corridor breakdown:
+corridor
+Other                    2454
+NYC Corridor             2095
+Philadelphia Corridor    1463
+2026-06-17 00:08:13 | INFO    | src.segmentation.segment | segmented: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/nj_housing_segmented.parquet
+2026-06-17 00:08:13 | INFO    | __main__ | ───── Phase 5: PRICING ANALYTICS ─────
+2026-06-17 00:08:13 | INFO    | src.pricing.pricing_analytics | [county] wrote 21 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_county.csv
+2026-06-17 00:08:14 | INFO    | src.pricing.pricing_analytics | [municipality] wrote 112 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_municipality.csv
+2026-06-17 00:08:17 | INFO    | src.pricing.pricing_analytics | [zip_cluster] wrote 598 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_zip_cluster.csv
+2026-06-17 00:08:17 | INFO    | src.pricing.pricing_analytics | building final pricing matrix
+2026-06-17 00:08:17 | INFO    | src.pricing.pricing_analytics | wrote pricing matrix (598 markets × 17 cells) → /home/arundatinair/nj-housing-pricing-model/outputs/pricing_matrix.csv
+2026-06-17 00:08:17 | INFO    | __main__ | ───── Phase 6: HEDONIC MODEL ─────
+2026-06-17 00:08:18 | INFO    | src.modeling.hedonic_model | wrote model evaluation report → /home/arundatinair/nj-housing-pricing-model/reports/model_evaluation_report.md
+2026-06-17 00:08:18 | INFO    | __main__ | model results: {'linear': {'test_metrics': {'MAE': 105988.82530608302, 'RMSE': 226508.237986192, 'R2': 0.4734972186374873}, 'cv_r2_mean': 0.41968674655854193, 'cv_r2_std': 0.21206988880408711, 'cv_mae_mean': 108934.28716166462}, 'ridge': {'best_alpha': 100.0, 'test_metrics': {'MAE': 100739.14175090798, 'RMSE': 220999.34402539022, 'R2': 0.4987958762299427}, 'cv_r2_mean': 0.40879460543394963}}
+2026-06-17 00:08:18 | INFO    | __main__ | ───── Phase 7: CLUSTERING ─────
+2026-06-17 00:08:19 | INFO    | src.modeling.clustering | k-means: chose k=4 (elbow scan over [2, 8])
+2026-06-17 00:08:19 | INFO    | src.modeling.clustering | clustered: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/listings_with_tier.parquet
+2026-06-17 00:08:19 | INFO    | __main__ | ───── Phase 8: CHARTS ─────
+2026-06-17 00:08:22 | INFO    | src.visualization.charts | wrote 8 chart files to /home/arundatinair/nj-housing-pricing-model/reports/figures
+2026-06-17 00:08:22 | INFO    | __main__ | ───── Phase 9: MAP ─────
+2026-06-17 00:08:22 | WARNING | src.visualization.map | no county GeoJSON at /home/arundatinair/nj-housing-pricing-model/data/external/nj_counties.geojson — falling back to centroid markers only
+2026-06-17 00:08:27 | INFO    | src.visualization.map | wrote interactive map: /home/arundatinair/nj-housing-pricing-model/outputs/nj_housing_map.html
+2026-06-17 00:08:27 | INFO    | __main__ | ───── Phase 10: DECK ─────
+2026-06-17 00:08:27 | INFO    | src.reporting.deck | wrote summary deck: /home/arundatinair/nj-housing-pricing-model/reports/summary_deck.pptx
+2026-06-17 00:08:27 | INFO    | __main__ | PIPELINE COMPLETE in 69.3s
+2026-06-17 00:09:58 | INFO    | __main__ | ───── Phase 1: SCRAPE ─────
+2026-06-17 00:09:58 | INFO    | src.scraper.orchestrator | OFFLINE mode — generating synthetic NJ listings
+2026-06-17 00:09:59 | INFO    | src.scraper.synthetic | synthetic generator produced 6017 listings across 21 counties
+2026-06-17 00:09:59 | INFO    | src.scraper.orchestrator | deduplication: 6017 → 6017 rows
+2026-06-17 00:09:59 | INFO    | src.scraper.orchestrator | wrote raw scrape: {'csv': PosixPath('/home/arundatinair/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_183959.csv'), 'parquet': PosixPath('/home/arundatinair/nj-housing-pricing-model/data/raw/nj_housing_raw_20260616_183959.parquet')}
+2026-06-17 00:09:59 | INFO    | __main__ | ───── Phase 2: CLEAN ─────
+2026-06-17 00:09:59 | INFO    | src.cleaning.clean | loaded raw: 6017 rows × 17 cols
+2026-06-17 00:09:59 | INFO    | src.cleaning.clean | cleaned: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/interim/nj_housing_clean.parquet
+2026-06-17 00:09:59 | INFO    | src.cleaning.clean | wrote data-quality report: /home/arundatinair/nj-housing-pricing-model/reports/data_quality_report.md
+2026-06-17 00:09:59 | INFO    | __main__ | clean metrics: {'input_rows': 6017, 'duplicates_removed': 0, 'price_outliers_removed': 5, 'invalid_zips_dropped': 0, 'invalid_counties_dropped': 0, 'output_rows': 6012, 'completeness_pct': 95.80089820359281}
+2026-06-17 00:09:59 | INFO    | __main__ | ───── Phase 3: GEOCODE ─────
+2026-06-17 00:09:59 | INFO    | src.geocoding.geocode | geocoded: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/interim/nj_housing_geocoded.parquet
+2026-06-17 00:09:59 | INFO    | __main__ | ───── Phase 4: SEGMENT ─────
+2026-06-17 00:09:59 | INFO    | src.segmentation.segment | ZIP clusters: 109 unique (incl. small-zip fallbacks)
+2026-06-17 00:09:59 | INFO    | src.segmentation.segment | corridor breakdown:
+corridor
+Other                    2454
+NYC Corridor             2095
+Philadelphia Corridor    1463
+2026-06-17 00:09:59 | INFO    | src.segmentation.segment | segmented: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/nj_housing_segmented.parquet
+2026-06-17 00:09:59 | INFO    | __main__ | ───── Phase 5: PRICING ANALYTICS ─────
+2026-06-17 00:09:59 | INFO    | src.pricing.pricing_analytics | [county] wrote 21 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_county.csv
+2026-06-17 00:10:00 | INFO    | src.pricing.pricing_analytics | [municipality] wrote 112 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_municipality.csv
+2026-06-17 00:10:03 | INFO    | src.pricing.pricing_analytics | [zip_cluster] wrote 598 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/pricing_by_zip_cluster.csv
+2026-06-17 00:10:03 | INFO    | src.pricing.pricing_analytics | building final pricing matrix
+2026-06-17 00:10:03 | INFO    | src.pricing.pricing_analytics | wrote pricing matrix (598 markets × 17 cells) → /home/arundatinair/nj-housing-pricing-model/outputs/pricing_matrix.csv
+2026-06-17 00:10:03 | INFO    | __main__ | ───── Phase 6: HEDONIC MODEL ─────
+2026-06-17 00:10:05 | INFO    | src.modeling.hedonic_model | wrote model evaluation report → /home/arundatinair/nj-housing-pricing-model/reports/model_evaluation_report.md
+2026-06-17 00:10:05 | INFO    | __main__ | model results: {'linear': {'test_metrics': {'MAE': 105988.82530608302, 'RMSE': 226508.237986192, 'R2': 0.4734972186374873}, 'cv_r2_mean': 0.41968674655854193, 'cv_r2_std': 0.21206988880408711, 'cv_mae_mean': 108934.28716166462}, 'ridge': {'best_alpha': 100.0, 'test_metrics': {'MAE': 100739.14175090798, 'RMSE': 220999.34402539022, 'R2': 0.4987958762299427}, 'cv_r2_mean': 0.40879460543394963}}
+2026-06-17 00:10:05 | INFO    | __main__ | ───── Phase 7: CLUSTERING ─────
+2026-06-17 00:10:06 | INFO    | src.modeling.clustering | k-means: chose k=4 (elbow scan over [2, 8])
+2026-06-17 00:10:06 | INFO    | src.modeling.clustering | clustered: 6012 rows → /home/arundatinair/nj-housing-pricing-model/data/processed/listings_with_tier.parquet
+2026-06-17 00:10:06 | INFO    | __main__ | ───── Phase 8: CHARTS ─────
+2026-06-17 00:10:09 | INFO    | src.visualization.charts | wrote 8 chart files to /home/arundatinair/nj-housing-pricing-model/reports/figures
+2026-06-17 00:10:09 | INFO    | __main__ | ───── Phase 9: MAP ─────
+2026-06-17 00:10:09 | WARNING | src.visualization.map | no county GeoJSON at /home/arundatinair/nj-housing-pricing-model/data/external/nj_counties.geojson — falling back to centroid markers only
+2026-06-17 00:10:15 | INFO    | src.visualization.map | wrote interactive map: /home/arundatinair/nj-housing-pricing-model/outputs/nj_housing_map.html
+2026-06-17 00:10:15 | INFO    | __main__ | ───── Phase 10: DECK ─────
+2026-06-17 00:10:15 | INFO    | src.reporting.deck | wrote summary deck: /home/arundatinair/nj-housing-pricing-model/reports/summary_deck.pptx
+2026-06-17 00:10:15 | INFO    | __main__ | PIPELINE COMPLETE in 16.8s
